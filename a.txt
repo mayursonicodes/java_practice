@@ -1,0 +1,19 @@
+If you are unable to paste your code into the TCS Xplore code editor, follow these steps to bypass the restriction using your browser's Developer Tools.
+
+1) Go to the assessment and put your cursor inside the code editor.
+
+2) Right-click inside the editor, select Inspect, and go to the Console tab.
+
+3) Copy-paste these codes into the console and press Enter:
+
+document.addEventListener('paste', function(e) {
+    e.stopImmediatePropagation();
+    return true;
+}, true);
+
+document.addEventListener('copy', function(e) {
+    e.stopImmediatePropagation();
+    return true;
+}, true);
+
+4) Now you can copy your code from any external source and paste it directly into your tcs xplore code editor
